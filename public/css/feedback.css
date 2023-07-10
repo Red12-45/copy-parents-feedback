@@ -1,0 +1,57 @@
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  color: #666;
+}
+  
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+/* Style the container for the message and button */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the button */
+.button {
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add a hover effect to the button */
+.button:hover {
+  background-color: #27ae60;
+}
+
+/* Style the link */
+.link {
+  color: #666;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Add a hover effect to the link */
+.link:hover {
+  color: #333;
+}

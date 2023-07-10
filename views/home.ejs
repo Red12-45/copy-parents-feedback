@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/home.css" />
+    <title>Parents FeedBack</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>SHARE YOUR OPINIONS WITH US</span>
+              </div>
+
+              <h1 id="admin"><a href="/login">Admin</a></h1>
+
+              <div class="app-contact">KOHIMA SCIENCE COLLEGE,JOTSOMA</div>
+            </div>
+
+            <div class="screen-body-item">
+              <form action="/feedback" method="POST">
+                <div class="app-form-group">
+                  <input
+                    type="text"
+                    class="app-form-control"
+                    placeholder="NAME"
+                    name="name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    class="app-form-control"
+                    placeholder="EMAIL"
+                    name="email"
+                    required
+                    title="Please enter a valid email address"
+                  />
+                  <input
+                    type="tel"
+                    class="app-form-control"
+                    placeholder="CONTACT NO"
+                    name="contactNo"
+                    pattern="[0-9]{10}"
+                    required
+                    title="Please enter a 10-digit phone number"
+                  />
+
+                  <textarea
+                    rows="10"
+                    cols="500"
+                    class="app-form-control"
+                    placeholder="MESSAGE"
+                    name="message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="app-form-group buttons">
+                  <button type="submit" class="app-form-button">SEND</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

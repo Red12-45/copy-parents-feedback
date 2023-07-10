@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Database</title>
+    <link rel="stylesheet" href="css/database.css" />
+  </head>
+  <body>
+    <table class="my-table">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% messages.reverse().forEach(function(message, index) { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= message.name %></td>
+          <td><%= message.email %></td>
+          <td><%= message.contactNo %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

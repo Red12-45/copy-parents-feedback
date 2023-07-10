@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parents FeedBack</title>
+    <link rel="stylesheet" type="text/css" href="css/messages.css" />
+  </head>
+  <body>
+    <% function formatDate(date) { const options = { month: "short", day:
+    "numeric", hour: "numeric", minute: "numeric", }; const dateStr = new
+    Date(date).toLocaleString("en-US", options); const diff = Math.floor((new
+    Date() - new Date(date)) / 1000); const intervals = [ { label: "year",
+    seconds: 31536000 }, { label: "month", seconds: 2592000 }, { label: "week",
+    seconds: 604800 }, { label: "day", seconds: 86400 }, { label: "hour",
+    seconds: 3600 }, { label: "minute", seconds: 60 }, { label: "second",
+    seconds: 1 }, ]; for (let i = 0; i < intervals.length; i++) { const interval
+    = intervals[i]; const count = Math.floor(diff / interval.seconds); if (count
+    >= 1) { return `${dateStr} (${count} ${interval.label}${ count > 1 ? "s" :
+    "" } ago)`; } } return dateStr; } %>
+
+    <div class="container">
+      <a href="/database"><h1 class="heading">Parents Feedback</h1></a>
+
+      <ul>
+        <% messages.reverse().forEach(function(message){ %>
+        <li>
+          <h3>
+            <%= message.name %> (<%=message.contactNo%>)
+            <p><%= message.email %></p>
+          </h3>
+          <br />
+
+          <p><%= message.message %></p>
+          <br />
+          <span class="post-date"
+            >Posted <%= formatDate(message.createdAt) %></span
+          >
+          <br />
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+  </body>
+</html>
